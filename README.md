@@ -12,7 +12,7 @@ MYSQL_DATABASE=database
 MYSQL_USER=user
 MYSQL_PASSWORD=password
 ```
-#Example JavaCode
+###Example JavaCode read single Section from INI-File
 ```
 String configFilePath = "config.ini";
 String iniSection = "MYSQL_DATABASE_CONNECTION";
