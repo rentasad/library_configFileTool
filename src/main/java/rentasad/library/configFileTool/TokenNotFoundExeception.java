@@ -1,4 +1,4 @@
-package org.gustini.library.configFileTool;
+package rentasad.library.configFileTool;
 
 public class TokenNotFoundExeception extends Exception
 {

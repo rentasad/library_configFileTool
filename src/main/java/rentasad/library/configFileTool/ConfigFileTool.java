@@ -1,4 +1,4 @@
-package org.gustini.library.configFileTool;
+package rentasad.library.configFileTool;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -18,12 +18,12 @@ import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.PBEKeySpec;
 import javax.crypto.spec.PBEParameterSpec;
 
-import org.gustini.library.logging.AbstractLoggingListener;
+import org.apache.log4j.Level;
 import org.ini4j.Ini;
 import org.ini4j.InvalidFileFormatException;
 import org.ini4j.Wini;
 
-import org.apache.log4j.Priority;
+import rentasad.rentasad.library.logging.AbstractLoggingListener;
 
 /**
  *
@@ -95,14 +95,13 @@ public class ConfigFileTool extends AbstractLoggingListener
      *             ConfigParserException
      *             Creation: 18.02.2015 by mst
      */
-    @SuppressWarnings("deprecation")
     public static Map<String, String> readConfiguration(String fileName, String sektionString) throws IOException, ConfigFileToolException
     {
         File configFile = new File(fileName);
         if (configFile.exists())
         {
             String message = String.format("Section %s of ConfigFile %s loaded.", sektionString, new File(fileName).getAbsolutePath());
-            logMessage(message, Priority.INFO);
+            logMessage(message, Level.INFO_INT);
 //            System.out.println(new File(fileName).getAbsolutePath());
             Map<String, String> konfigMap = new HashMap<String, String>();
             Wini ini = new Wini();
@@ -119,7 +118,7 @@ public class ConfigFileTool extends AbstractLoggingListener
             } else
             {
                 message = "Folgende Section wurde in der INI-Datei nicht gefunden: " + sektionString;
-                logMessage(message, Priority.ERROR);
+                logMessage(message, Level.INFO_INT);
                 throw new ConfigFileToolException(message);
             }
 
@@ -175,6 +174,7 @@ public class ConfigFileTool extends AbstractLoggingListener
         Wini ini = new Wini();
         Set<String> sectionSet = ini.keySet();
         File file = new File(fileName);
+        
         String filePatj = file.getAbsolutePath();
         System.out.println(filePatj);
         ini.load(new FileReader(file));

@@ -1,22 +1,19 @@
-<?xml version="1.0"?>
-<project
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
-	xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<groupId>Gustini</groupId>
-		<artifactId>gustini.library</artifactId>
-		<version>latest</version>
-	</parent>
-	<artifactId>gustini.library.configFileTool</artifactId>
-	<version>latest</version>
-	<name>configFileTool</name>
+
+	<groupId>rentasad</groupId>
+	<artifactId>rentasad.library.configFileTool</artifactId>
+	<version>1.0.0</version>
+	<packaging>jar</packaging>
+
+	<name>rentasad.library.configFileTool</name>
 	<url>http://maven.apache.org</url>
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
-
 	<build>
 		<plugins>
 			<plugin>
@@ -29,25 +26,26 @@
 			</plugin>
 		</plugins>
 	</build>
-
-
-
 	<dependencies>
+		<!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
 		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>3.8.1</version>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
+			<version>5.5.2</version>
 			<scope>test</scope>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.ini4j/ini4j 
+			HANDLING INI-FILE READ- AND WRITE
+		-->
 		<dependency>
 			<groupId>org.ini4j</groupId>
 			<artifactId>ini4j</artifactId>
 			<version>0.5.4</version>
 		</dependency>
 		<dependency>
-			<groupId>Gustini</groupId>
-			<artifactId>gustini.library.logging</artifactId>
-			<version>latest</version>
+			<groupId>rentasad</groupId>
+			<artifactId>rentasad.library.logging</artifactId>
+			<version>1.0.0</version>
 		</dependency>
 	</dependencies>
 </project>

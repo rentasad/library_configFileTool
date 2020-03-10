@@ -1,7 +1,7 @@
 /**
  * 
  */
-package org.gustini.library.configFileTool;
+package rentasad.library.configFileTool;
 
 /**
  * Gustini GmbH (2015)
