@@ -2,6 +2,8 @@ Gustini Library: ConfigFileTool
 ======
 ** Tool to Read and Write INI-Configs to and from HashMaps
 
+# Project was moved to consolidated Project https://github.com/rentasad/library_basicTools
+
 ## Usage
 
 Example INI-File: config.ini
